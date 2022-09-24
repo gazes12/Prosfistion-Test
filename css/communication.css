@@ -287,6 +287,13 @@
   }
 }
 @media (max-width: 480px) {
+  .form-content__name,
+.form-content__surname,
+.form-content__recall {
+    min-height: 34px;
+    font-size: 17px;
+  }
+
   .create-recall__buttons {
     margin-top: 7px;
     display: -webkit-box;
