@@ -1,0 +1,125 @@
+.popup-about-work {
+    background: rgba(0,0,0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+    &.active{
+        display: flex;
+    }
+}
+.popup-about-work__body {
+    background: #fff;
+    width: 90%;
+    position: relative;
+    padding: 60px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popup-about-work__title {
+}
+
+.popup-about-work__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+
+    top: 3%;
+    right: 2%;
+
+    transition: all .3s ease;
+
+    &:hover{
+        color: rgb(236, 119, 119);
+    }
+}
+
+.popup-about-work__button {
+    padding: 30px 40px;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+
+@media(max-width: 1200px){
+    .popup-about-work__body{
+        padding: 48px;
+    }
+}
+
+@media(max-width: 992px){
+    .popup-about-work__body{
+        padding: 38px;
+    }
+
+    .popup-about-work__title {
+        font-size: 42px !important;
+    }   
+
+    .popup-about-work__button {
+        padding: 25px 35px;
+        font-size: 24px;
+        margin-top: 40px;
+    }    
+    
+}
+
+@media(max-width: 768px){
+    .popup-about-work__body{
+        padding: 30px;
+    }
+
+    .popup-about-work__title {
+        font-size: 35px !important;
+    } 
+
+    .popup-about-work__button {
+        padding: 16px 22px;
+        font-size: 19px;
+        margin-top: 25px;
+    }    
+
+    .popup-about-work__close{
+        font-size: 33px;
+        top: 2%;
+        right: 2%;
+    }
+}
+
+@media(max-width: 480px){
+    .popup-about-work__close{
+        font-size: 28px;
+        top: 5%;
+        right: 4%;
+    }
+
+    .popup-about-work__body{
+        padding: 30px;
+    }
+
+    .popup-about-work__title {
+        font-size: 22px !important;
+    } 
+
+    .popup-about-work__button {
+        padding: 12px 17px;
+        font-size: 15px;
+        margin-top: 20px;
+    }    
+}

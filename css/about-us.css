@@ -1,0 +1,138 @@
+.main {
+  font-size: 16px;
+  padding-top: 88px;
+}
+
+.about-us {
+  padding: 81.6px 0;
+}
+
+.about-us__container {
+  text-align: center;
+}
+
+.about-us__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.logo {
+  font-family: "Lily Script One", cursive;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 66px;
+  color: #1648FB;
+  position: absolute;
+  left: 3%;
+  top: 0;
+}
+
+.about-us__title {
+  color: #8F00FF !important;
+}
+
+.about-us__subtitle {
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    padding-top: 65px;
+  }
+
+  .logo {
+    font-size: 35px;
+  }
+
+  .about-us__subtitle {
+    font-size: 34px;
+  }
+}
+@media (max-width: 992px) {
+  .main {
+    padding-top: 50px;
+  }
+
+  .about-us {
+    padding: 50px 0;
+  }
+
+  .logo {
+    left: 2%;
+    top: 16px;
+    font-size: 31px;
+    letter-spacing: 1.3px;
+  }
+
+  .about-us__subtitle {
+    font-size: 23px;
+    margin-top: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding-top: 35px;
+  }
+
+  .logo {
+    left: 2%;
+    top: 12px;
+    font-size: 21px;
+    letter-spacing: 1.3px;
+  }
+
+  .about-us {
+    padding: 25px 0;
+  }
+
+  .about-us__subtitle {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    padding-top: 30px;
+  }
+
+  .logo {
+    font-size: 26px;
+    left: 9%;
+    top: 6px;
+    width: 16px;
+    overflow: hidden;
+  }
+
+  .about-us {
+    padding: 10px 0;
+  }
+
+  .about-us__subtitle {
+    font-size: 17px;
+  }
+}
+@media (max-width: 320px) {
+  .main {
+    padding-top: 30px;
+  }
+
+  .logo {
+    top: -3px;
+    width: 11px;
+    font-size: 19px;
+  }
+
+  .about-us {
+    padding: 10px 0;
+  }
+
+  .about-us__subtitle {
+    font-size: 13px;
+  }
+}

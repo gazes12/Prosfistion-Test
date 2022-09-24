@@ -1,0 +1,596 @@
+body.light .create-recall__form-input, body.light .create-recall__form-textarea, body.light .change-recall__form-input, body.light .change-recall__form-textarea {
+  background: #fff;
+  border: 1px solid #545456;
+  color: #727272;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body.light .create-recall__buttons-cancel, body.light .create-recall__buttons-send, body.light .change-recall__buttons-cancel, body.light .change-recall__buttons-send {
+  border: 1px solid #545456;
+}
+body.light .create-recall__buttons-cancel, body.light .change-recall__buttons-cancel {
+  color: #727272;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+body.light .create-recall__buttons-cancel:hover, body.light .change-recall__buttons-cancel:hover {
+  background: #c5c3c3;
+}
+body.light .create-recall__buttons-send, body.light .change-recall__buttons-send {
+  border: 1px solid #5266b0;
+  background: #96b9e3;
+  color: #fff;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+body.light .create-recall__buttons-send:hover, body.light .change-recall__buttons-send:hover {
+  background: #6ea5e7;
+}
+body.light .create-recall__buttons-send:active, body.light .change-recall__buttons-send:active {
+  background: #96b9e3;
+}
+body.light .recalls {
+  border-top: 1px solid #9b9b9b;
+}
+body.light .recalls__result {
+  color: #fff !important;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body.light .recalls__result--succ {
+  background: rgb(0, 255, 8);
+  -webkit-box-shadow: 0px 0px 66px 0px rgb(75, 204, 79);
+          box-shadow: 0px 0px 66px 0px rgb(75, 204, 79);
+}
+body.light .recalls__result--error {
+  -webkit-box-shadow: 0px 0px 23px 15px rgb(235, 29, 29);
+          box-shadow: 0px 0px 23px 15px rgb(235, 29, 29);
+  background: red;
+}
+body.light .recalls__reminder {
+  background: #000;
+  -webkit-box-shadow: -1px 5px 43px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 5px 43px -6px rgba(0, 0, 0, 0.75);
+  color: #fff !important;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  /*             &.ready {
+                  background: #fff;
+                  .recalls__reminder-mark{
+                      color: rgb(25, 209, 25);
+                  }
+              } */
+}
+body.light .recall {
+  background: #fdfdfd;
+  border: 1px solid #545456;
+}
+body.light .recall__people {
+  color: #727272;
+}
+body.light .recall__people-buttons-change {
+  color: #ffffff;
+  background: #96b9e3;
+  border: 1px solid #5266b0;
+}
+body.light .recall__people-buttons-delete {
+  color: #ffffff;
+  background: #f0c24c;
+  border: 1px solid #886200;
+}
+body.light .recall__text {
+  color: #727272;
+}
+
+body.dark .create-recall__form-input, body.dark .create-recall__form-textarea, body.dark .change-recall__form-input, body.dark .change-recall__form-textarea {
+  background: #000;
+  border: 1px solid #545456;
+  color: #727272;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body.dark .create-recall__buttons-cancel, body.dark .create-recall__buttons-send, body.dark .change-recall__buttons-cancel, body.dark .change-recall__buttons-send {
+  border: 1px solid #545456;
+}
+body.dark .create-recall__buttons-cancel, body.dark .change-recall__buttons-cancel {
+  color: #727272;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+body.dark .create-recall__buttons-cancel:hover, body.dark .change-recall__buttons-cancel:hover {
+  background: #c5c3c3;
+}
+body.dark .create-recall__buttons-send, body.dark .change-recall__buttons-send {
+  border: 1px solid #5266b0;
+  background: #96b9e3;
+  color: #fff;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+body.dark .create-recall__buttons-send:hover, body.dark .change-recall__buttons-send:hover {
+  background: #6ea5e7;
+}
+body.dark .create-recall__buttons-send:active, body.dark .change-recall__buttons-send:active {
+  background: #96b9e3;
+}
+body.dark .recalls__result {
+  color: #fff !important;
+}
+body.dark .recalls__result--succ {
+  background: rgb(9, 176, 15);
+  -webkit-box-shadow: 0px 0px 66px 0px rgb(11, 145, 16);
+          box-shadow: 0px 0px 66px 0px rgb(11, 145, 16);
+}
+body.dark .recalls__result--error {
+  -webkit-box-shadow: 0px 0px 23px 15px rgb(143, 21, 21);
+          box-shadow: 0px 0px 23px 15px rgb(143, 21, 21);
+  background: rgb(185, 26, 26);
+}
+body.dark .recalls__reminder {
+  background: #fff;
+  -webkit-box-shadow: -1px 5px 43px -6px rgba(189, 189, 189, 0.75);
+          box-shadow: -1px 5px 43px -6px rgba(189, 189, 189, 0.75);
+  color: #000 !important;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  /*             &.ready {
+                  background: #000;
+                  .recalls__reminder-mark{
+                      color: rgb(21, 155, 21);
+                  }
+              } */
+}
+body.dark .recall {
+  background: #000;
+  border: 1px solid #fff;
+}
+body.dark .recall__people-fio {
+  color: #727272;
+}
+body.dark .recall__people-buttons-change {
+  color: #ffffff;
+  background: #000;
+  border: 1px solid #FFFFFF;
+}
+body.dark .recall__people-buttons-delete {
+  color: #ffffff;
+  background: #000;
+  border: 1px solid #FFFFFF;
+}
+body.dark .recall__text {
+  color: #727272;
+}
+
+.create-recall, .change-recall {
+  padding: 64px 0;
+  display: none;
+}
+.create-recall__title, .change-recall__title {
+  margin-bottom: 40px;
+}
+.create-recall__form, .change-recall__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 690px;
+  margin: 0 auto;
+  gap: 16px;
+}
+.create-recall__form-input, .create-recall__form-textarea, .change-recall__form-input, .change-recall__form-textarea {
+  width: 100%;
+  padding: 7px 22px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.create-recall__form-textarea, .change-recall__form-textarea {
+  resize: none;
+}
+.create-recall__buttons, .change-recall__buttons {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  gap: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.create-recall__buttons-cancel, .create-recall__buttons-send, .change-recall__buttons-cancel, .change-recall__buttons-send {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.create-recall__buttons-cancel, .change-recall__buttons-cancel {
+  padding: 7px 22px;
+}
+.create-recall__buttons-send, .change-recall__buttons-send {
+  padding: 7px 74px;
+}
+.create-recall__buttons-send:active, .change-recall__buttons-send:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.create-recall__id, .change-recall__id {
+  margin-bottom: 20px;
+}
+.create-recall.visible, .change-recall.visible {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .create-recall__buttons, .change-recall__buttons {
+    margin-top: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .create-recall__title, .change-recall__title {
+    margin-bottom: 22px;
+  }
+  .create-recall__form-input, .create-recall__form-textarea, .change-recall__form-input, .change-recall__form-textarea {
+    padding: 7px 14px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 480px) {
+  .create-recall__title, .change-recall__title {
+    margin-bottom: 14px;
+  }
+  .create-recall__form, .change-recall__form {
+    gap: 8px;
+  }
+  .create-recall__form-input, .create-recall__form-textarea, .change-recall__form-input, .change-recall__form-textarea {
+    padding: 6px 9px;
+    font-size: 11.4px;
+  }
+  .create-recall__buttons, .change-recall__buttons {
+    margin-top: 5px;
+    gap: 7px;
+  }
+  .create-recall__buttons-cancel, .create-recall__buttons-send, .change-recall__buttons-cancel, .change-recall__buttons-send {
+    font-size: 16px;
+    padding: 5px 32px;
+  }
+}
+@media (max-width: 320px) {
+  .create-recall__form, .change-recall__form {
+    gap: 8px;
+  }
+  .create-recall__form-input, .create-recall__form-textarea, .change-recall__form-input, .change-recall__form-textarea {
+    padding: 6px 7px;
+    font-size: 9.2px;
+  }
+  .create-recall__buttons, .change-recall__buttons {
+    margin-top: 2px;
+    gap: 7px;
+  }
+  .create-recall__buttons-cancel, .create-recall__buttons-send, .change-recall__buttons-cancel, .change-recall__buttons-send {
+    font-size: 12px;
+    padding: 4px 31px;
+  }
+}
+.recalls {
+  padding: 34px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.recalls__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 50px;
+  padding: 0 15px;
+}
+.recalls__result {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+  padding: 0.4em;
+  font-size: 40px;
+  text-align: center;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.recalls__result.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.recalls__arrow {
+  font-size: 40px;
+}
+.recalls__arrow.disabled {
+  display: none;
+}
+.recalls__column-reminder {
+  display: none;
+}
+.recalls__column-reminder.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.recalls__reminder {
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.recalls__column-recalls {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  overflow-y: scroll;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  max-height: 450px;
+}
+
+.recall {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.recall__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.recall__people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.recall__people-fio {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 11px 6px 0px 19px;
+  word-break: break-all;
+  word-spacing: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.recall__people-fio-status {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 100%;
+  position: absolute;
+  top: 68%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -7px;
+}
+.recall__people-fio-status.online {
+  background: #3BD123;
+}
+.recall__people-fio-status.offline {
+  background: red;
+}
+.recall__people-fio-status.blue {
+  background: yellow;
+}
+.recall__people-fio-arrow {
+  padding-left: 10px;
+}
+.recall__people-buttons {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+}
+.recall__people-buttons-change, .recall__people-buttons-delete {
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 1px 19px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.recall__people-buttons-change:hover, .recall__people-buttons-delete:hover {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+.recall__text {
+  font-size: 24px !important;
+  line-height: 1.2;
+  padding: 14px 0 26px 28px;
+  word-break: break-all;
+  text-align: center;
+  /*     &.elipsise{
+      text-overflow: ellipsis;
+
+      overflow: hidden;
+      white-space: nowrap;
+      width: 500px;
+  } */
+}
+
+@media (max-width: 1200px) {
+  .recalls__result {
+    font-size: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .recalls__result {
+    font-size: 30px;
+  }
+
+  .recall__people-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .recalls {
+    padding: 18px !important;
+  }
+  .recalls__result {
+    font-size: 25px;
+  }
+  .recalls__arrow {
+    font-size: 35px;
+  }
+  .recalls__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .recall {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .recall__people {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .recall__people-fio {
+    padding: 0;
+    padding-top: 11px;
+    padding-right: 11px;
+    font-size: 19px;
+  }
+  .recall__people-buttons-change, .recall__people-buttons-delete {
+    font-size: 19px;
+  }
+  .recall__text {
+    padding: 14px 0;
+    font-size: 23px !important;
+  }
+}
+@media (max-width: 480px) {
+  .recalls__result {
+    font-size: 20px;
+  }
+  .recalls__arrow {
+    font-size: 30px;
+  }
+  .recalls__row {
+    gap: 25px;
+  }
+
+  .recall__people-fio {
+    font-size: 13px;
+    gap: 5px;
+  }
+  .recall__people-buttons-change, .recall__people-buttons-delete {
+    font-size: 13px;
+  }
+  .recall__text {
+    font-size: 18px !important;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 320px) {
+  .recalls__result {
+    font-size: 14px;
+  }
+  .recalls__arrow {
+    font-size: 25px;
+  }
+
+  .recall__people-fio {
+    font-size: 11px;
+    gap: 3px;
+  }
+  .recall__people-buttons-change, .recall__people-buttons-delete {
+    font-size: 11px;
+  }
+  .recall__text {
+    font-size: 16px !important;
+    padding: 7px 0;
+  }
+}

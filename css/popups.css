@@ -1,0 +1,169 @@
+body.light .popup-about-work {
+  background: #fff;
+}
+
+body.dark .popup-about-work {
+  background: #000;
+}
+
+.popup-about-work {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.popup-about-work.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.popup-about-work__body {
+  margin: 0 auto;
+  border-radius: 25.6px;
+  padding: 59.2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  position: relative;
+}
+
+.popup-about-work__title {
+  font-size: 52px;
+  text-align: center;
+}
+
+.popup-about-work__close {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 64px;
+  color: red;
+  cursor: pointer;
+}
+
+.popup-about-work__name {
+  font-size: 52px !important;
+}
+
+.popup-about-work__description {
+  font-size: 32px !important;
+  margin-top: 32px !important;
+}
+
+.popup-about-work__button {
+  padding: 27px 44px;
+  font-size: 27px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+  .popup-about-work__body {
+    padding: 45.2px;
+    width: 85%;
+  }
+
+  .popup-about-work__close {
+    font-size: 55px;
+  }
+
+  .popup-about-work__title {
+    font-size: 45px;
+  }
+
+  .popup-about-work__name {
+    font-size: 45px !important;
+  }
+
+  .popup-about-work__description {
+    font-size: 25px !important;
+  }
+
+  .popup-about-work__button {
+    padding: 17px 26px;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .popup-about-work__body {
+    padding: 30.2px;
+  }
+
+  .popup-about-work__close {
+    font-size: 40px;
+  }
+
+  .popup-about-work__title {
+    font-size: 35px;
+  }
+
+  .popup-about-work__description {
+    font-size: 18px !important;
+    margin-top: 20px !important;
+  }
+
+  .popup-about-work__button {
+    padding: 13px 18px;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .popup-about-work__body {
+    padding: 35.2px;
+    width: 90%;
+  }
+
+  .popup-about-work__close {
+    font-size: 33px;
+    right: 8px;
+  }
+
+  .popup-about-work__title {
+    font-size: 32px;
+  }
+
+  .popup-about-work__name {
+    font-size: 39px !important;
+  }
+
+  .popup-about-work__description {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+
+  .popup-about-work__button {
+    padding: 12px 15px;
+    font-size: 19px;
+    margin-top: 10px;
+  }
+}

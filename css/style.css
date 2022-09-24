@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+@import url("../css/all.css");
+@import url("../css/adaptive.css");
+@import url("../css/reset.css");
+@import url("../css/header.css");
+@import url("../css/order.css");
+@import url("../css/about-us.css");
+@import url("../css/swipers.css");
+@import url("../css/connect-with-us.css");
+@import url("../css/footer.css");
+@import url("../css/popups/about-work.css");
+@import url("../css/communication.css");
+@import url("../css/generalClass.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+[class*=__container] {
+  max-width: 1030px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 2000px;
+  overflow-x: hidden;
+}
+body.light {
+  background: #D8D8D8;
+  color: #000;
+}
+body.dark {
+  background: #1E1E1E;
+  color: #fff;
+}
+
+/* #cursor,
+#aura{
+    position: absolute;
+    border-radius: 100%;
+    transition: transform .5s cubic-bezier(.01,1.41,1,-1.7), .2s cubic-bezier(.01,1.41,1,-1.7) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+#cursor{
+    width: 8px;
+    height: 8px;
+
+    background-color: rgba(#fff, .5);
+}
+
+#aura{
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(#fff, .2);
+    background-color: rgba(#fff, .1);
+} */

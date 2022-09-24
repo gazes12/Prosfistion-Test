@@ -1,0 +1,87 @@
+.connect-witch-us {
+  padding: 32px 0;
+}
+
+.connect-witch-us__title {
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 9px;
+}
+
+.connect-witch-us__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.connect-witch-us__item {
+  text-align: center;
+}
+
+.connect-witch-us__status {
+  font-size: 30px;
+}
+
+.connect-witch-us__name {
+  font-size: 20px;
+}
+
+.connect-witch-us__icon {
+  font-size: 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.connect-witch-us__icon:hover {
+  -webkit-transform: scale(1.3) rotate(360deg);
+          transform: scale(1.3) rotate(360deg);
+  color: rgb(179, 174, 174);
+}
+
+@media (max-width: 768px) {
+  .connect-witch-us {
+    padding: 20px 0;
+  }
+
+  .connect-witch-us__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+
+  .connect-witch-us__status {
+    font-size: 22px;
+  }
+
+  .connect-witch-us__name {
+    font-size: 17px;
+  }
+
+  .connect-witch-us__icon {
+    font-size: 27px;
+  }
+}
+@media (max-width: 480px) {
+  .connect-witch-us__items {
+    gap: 8px;
+  }
+
+  .connect-witch-us__status {
+    font-size: 20px;
+  }
+
+  .connect-witch-us__name {
+    font-size: 16px;
+  }
+
+  .connect-witch-us__icon {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,327 @@
+@charset "UTF-8";
+.communication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.communication__result {
+  display: none;
+}
+.communication__result.visible {
+  display: block;
+}
+.communication__result_error {
+  color: red;
+}
+.communication__result_succ {
+  color: green;
+}
+
+.communication__forms {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.communication__wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/*Стрелочки*/
+.communication__arrow {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1000;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/*====================================*/
+/*Формы*/
+/*Общие классы формочек*/
+.form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 689px;
+  margin: 0 auto;
+}
+
+.form-content__name,
+.form-content__surname,
+.form-content__recall {
+  background: #FDFDFD;
+  border: 1px solid #545456;
+  width: 100%;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #727272;
+  padding: 7px 23px;
+  min-height: 43px;
+  margin-bottom: 9px;
+}
+
+.create-recall__buttons {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.button {
+  font-size: 24px;
+  line-height: 29px;
+  padding: 8px 0;
+}
+
+.button_clear {
+  background: #F1F1F1;
+  border: 1px solid #9B9B9B;
+  color: #727272;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button_send {
+  background: #96B9E3;
+  border: 1px solid #5266B0;
+  color: #FFFFFF;
+  padding-left: 74px;
+  padding-right: 74px;
+}
+
+/*====================================*/
+/*форма создать отзыв*/
+.create-recall {
+  margin-bottom: 20px;
+}
+.create-recall.opacity {
+  opacity: 0.4;
+}
+
+.create-recall__title {
+  margin-bottom: 39px;
+}
+
+/*=============================================*/
+/*Форма изменить отзыв*/
+.change-recall {
+  position: absolute;
+  width: 100%;
+  right: -900px;
+  top: 0;
+}
+.change-recall.opacity {
+  opacity: 0.4;
+}
+
+.change-recall__title {
+  margin-bottom: 39px;
+}
+
+.change-recall__buttons {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+/*===========================================*/
+/*Отзывы*/
+.recalls {
+  width: 100%;
+  border-top: 1px solid #9B9B9B;
+  margin-top: 69px;
+  padding-top: 52px;
+  padding-left: 44px;
+}
+
+.recall {
+  background: #FDFDFD;
+  border: 1px solid #545456;
+  max-width: 689px;
+  min-height: 104px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #727272;
+  margin-bottom: 40px;
+}
+
+.recall-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recall-fio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0 0 19px;
+}
+
+.recall-fio__name {
+  margin-right: 8px;
+}
+
+.recall-fio__status {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 100%;
+  margin-left: 6px;
+}
+
+.online {
+  background: #3BD123;
+}
+
+.offline {
+  background: red;
+}
+
+.recall-buttons {
+  padding: 5px;
+}
+
+.recall-buttons__change,
+.recall-buttons__delete {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  padding: 0 19px;
+}
+
+.recall-buttons__change {
+  background: #96B9E3;
+  border: 1px solid #5266B0;
+}
+
+.recall-buttons__delete {
+  background: #F0C24C;
+  border: 1px solid #886200;
+}
+
+.recall-bottom__text {
+  padding: 14px 0 26px 28px;
+}
+
+@media (max-width: 1200px) {
+  .create-recall__title {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .form-content__name,
+.form-content__surname,
+.form-content__recall {
+    padding: 5px 15px;
+    min-height: 43px;
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 23px;
+  }
+}
+@media (max-width: 768px) {
+  .create-recall__title {
+    margin-bottom: 15px;
+  }
+
+  .form-content__name,
+.form-content__surname,
+.form-content__recall {
+    min-height: 39px;
+    font-size: 20px;
+  }
+
+  .create-recall__buttons {
+    margin-top: 3px;
+  }
+
+  .button {
+    font-size: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .button_send {
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+}
+@media (max-width: 480px) {
+  .create-recall__buttons {
+    margin-top: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+  }
+}
+@media (max-width: 320px) {
+  .form-content__name,
+.form-content__surname,
+.form-content__recall {
+    min-height: 30px;
+    font-size: 15px;
+    padding: 3px 10px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .create-recall__buttons {
+    margin-top: 4px;
+    gap: 7px;
+  }
+}

@@ -1,0 +1,90 @@
+.order {
+  padding: 64px 0;
+}
+
+.order__button {
+  padding: 17px 137px;
+  font-size: 35px;
+  background: #446DFF;
+  border: 1px solid #002845;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.order__button:hover {
+  background: #002845;
+  border: 1px solid #446DFF;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.order__button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.order__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 562px) {
+  .order__title {
+    margin-bottom: 10px;
+  }
+}
+
+.order__price {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .order__price {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .order {
+    padding: 40px;
+  }
+
+  .order__button {
+    padding: 9px 57px;
+    font-size: 21px;
+  }
+
+  .order__price {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .order {
+    padding: 28px;
+  }
+
+  .order__button {
+    padding: 8px 55px;
+    font-size: 18px;
+  }
+
+  .order__price {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .order__button {
+    padding: 7px 27px;
+    font-size: 16px;
+  }
+}

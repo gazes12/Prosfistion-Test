@@ -1,0 +1,215 @@
+<?php
+session_set_cookie_params(18000,"/");
+session_start();
+
+require 'php/config.php';
+
+ if(empty($_SESSION['user_id'])){
+    $user_id = uniqid('user_', true);
+    $_SESSION['user_id'] = $user_id;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" title="theme" href="css/theme/light.css">
+    <link rel="shortcut icon" href="img/Logo/icon.svg">
+    <title>Prosfistion - Нужен сайт не проблема?</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header__container">
+                <div class="header__top">
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#about-us">О нас</a></li>
+                            <li class="menu__item"><a href="#recall">Отзывы</a></li>
+                            <li class="menu__item"><a href="#help">Помощь</a></li>
+                            <li class="menu__item"><a href="#order">Заказать</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header__buttons buttons-header">
+                        <a href="#" class="button-header buttons-header__login">Log in</a>
+                        <a href="#" class="button-header buttons-header__register">Register</a>
+                    </div>
+                    
+                    <div class="theme">
+                        <i class="fa-solid fa-toggle-on change-theme change-theme--light"></i>
+                        <i class="fa-solid fa-toggle-off change-theme change-theme--dark"></i>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <nav class="header__menu-mobile menu-mobile">
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="about-us background" id="about-us">
+                <div class="about-us__header">
+                    <div class="logo">prosfistion</div>
+                    <div class="about-us__title title">Мы делаем сайты.</div>
+                </div>
+                <div class="about-us__container">
+                    <div class="about-us__subtitle">Наши работы</div>
+                </div>
+            </section>
+
+            <section class="order background"  id="order">
+                <div class="order__container">
+                    <div class="order__title title">Закажи сайт прямо сейчас!</div>
+                    <div class="order__price title">Цена : договорная</div>
+                    <button class="order__button btn">Заказать</button>
+                </div>
+            </section>
+
+            <section class="communication background">
+                <div class="communication__result">Лиза Щербина, Настя Сальцова</div>
+                
+                <div class="communication__forms">
+                    <i class="communication__arrow fa-solid fa-reply"></i>
+                    
+                    <div class="communication__wrapper">
+                        <div class="create-recall">
+                            <div class="create-recall__title title">Оставь свой отзыв!</div>
+
+                            <form class="form-content form-content_create-recall">
+                                <input type="text" name="name" class="form-content__name form-content_create-recall__name" placeholder="Имя">
+                                <input type="text" name="surname"placeholder="Фамилия (не обязательно)" class="form-content__surname form-content_create-recall__surname">
+                                <textarea name="recall" placeholder="Оставить отзыв..." class="form-content__recall form-content_create-recall__recall"></textarea>
+
+                                <div class="create-recall__buttons create-recall-buttons">
+                                    <button class="button button_clear" type="submit">Очистить</button>
+                                    <button class="button button_send" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="change-recall">
+                            <div class="change-recall__title title">Измени отзыв!!</div>
+
+                            <form class="form-content">
+                                <input type="text" class="form-content__name" placeholder="Имя">
+                                <input type="text" placeholder="Фамилия (не обязательно)" class="form-content__surname">
+                                <textarea placeholder="Оставить отзыв..." class="form-content__recall"></textarea>
+
+                                <div class="change-recall__buttons">
+                                    <button class="button button_clear">Очистить</button>
+                                    <button class="button button_send">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+<!--                 <div class="recalls">
+                    <?php
+                        $query = $conn->query("SELECT * FROM `recalls`");
+                        $result = $query->fetchAll();
+                        foreach($result as $result){
+                            ?>
+                                <div class="recall">
+                                    <div class="recall-top">
+                                        <div class="recall-fio">
+                                            <div class="recall-fio__name"><?=$result['name']?></div>
+                                            <div class="recall-fio__surname"><?=$result['surname']?></div>
+                                                <?php
+                                                    if($result['status'] == 1){
+                                                        ?>
+                                                            <div class="recall-fio__status online" data-userId="<?=$result['user_id']?>">
+                                                        <?php
+                                                    }else{
+                                                        ?>
+                                                            <div class="recall-fio__status offline" data-userId="<?=$result['user_id']?>">
+                                                        <?php
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
+            
+                                        <div class="recall-buttons">
+                                            <button class="recall-buttons__change" id="<?=$result['id']?>">Изменить</button>
+                                            <button class="recall-buttons__delete" id="<?=$result['id']?>">Удалить</button>
+                                        </div>
+                                    </div>
+            
+                                    <div class="recall-bottom">
+                                        <div class="recall-bottom__text"><?=$result['recall']?></div>
+                                    </div>                                    
+                                </div>                                
+                            <?php
+                        }
+                        
+                    ?>
+                </div>    -->             
+            </section>
+
+            <section class="connect-witch-us background"  id="help">
+                <p class="connect-witch-us__title title bb">сообщить о проблеме:</p>
+                <div class="connect-witch-us__container">
+                    <div class="connect-witch-us__items">
+                        <div class="connect-witch-us__item">
+                            <p class="connect-witch-us__status">Веб-разработчик</p>
+                            <p class="connect-witch-us__name">gazes12#1950</p>
+                        </div>
+                        <a href="https://discord.gg/bxqxuxJt" target="_blank" class="connect-witch-us__icon"><i class="fa-brands fa-discord"></i></a>
+                        <div class="connect-witch-us__item">
+                            <p class="connect-witch-us__status">Веб-дизайнер</p>
+                            <p class="connect-witch-us__name">zxcawsd#2177</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <div class="popup-about-work">
+            <div class="popup-about-work__body">
+                <div class="popup-about-work__title title">Подробнее о работе</div>
+                <i class="fa-solid fa-circle-xmark popup-about-work__close"></i>
+
+                <a href="" class="popup-about-work__button button-swiper btn">Посмотреть</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" ></script> 
+
+
+    <script src="js/gsap.js"></script>
+    <script src="js/moving.js"></script>
+    <script src="js/switcher.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/popups/about-work.js"></script>
+    <script src="js/header.js"></script>
+
+
+    <!--Отзывы-->
+    <script src="js/communication/htmlObjects.js"></script>
+
+
+    <script src="js/communication/mainRecall.js"></script>
+    <script src="js/communication/addRecall.js"></script>
+    <script src="js/communication/changeRecall.js"></script>
+    <script src="js/communication/deleteRecall.js"></script>
+    <script src="js/communication/update_status.js"></script>
+    <script src="js/communication/switcherForms.js"></script>
+</body>
+</html>
+
