@@ -1,0 +1,1 @@
+$('.burger').click(() => $('.menu-mobile').toggleClass('active'));

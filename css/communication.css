@@ -13,6 +13,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .communication__result {
@@ -48,15 +49,26 @@
 
 /*Стрелочки*/
 .communication__arrow {
-  font-size: 40px;
+  font-size: 50px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1000;
-  left: 0;
+  left: 1em;
+  cursor: pointer;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+.communication__arrow:hover {
+  text-shadow: 2px 4px 6px rgb(0, 0, 0);
+}
+
+.right {
+  left: unset;
+  right: 1em;
+  -webkit-transform: translateY(-50%) rotate(175deg);
+          transform: translateY(-50%) rotate(175deg);
 }
 
 /*====================================*/
@@ -128,6 +140,8 @@
 }
 .create-recall.opacity {
   opacity: 0.4;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .create-recall__title {
@@ -144,6 +158,8 @@
 }
 .change-recall.opacity {
   opacity: 0.4;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .change-recall__title {
@@ -245,6 +261,10 @@
   .create-recall__title {
     margin-bottom: 25px;
   }
+
+  .communication__arrow {
+    font-size: 40px;
+  }
 }
 @media (max-width: 992px) {
   .form-content__name,
@@ -257,6 +277,10 @@
 
   .button {
     font-size: 23px;
+  }
+
+  .communication__arrow {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -271,7 +295,8 @@
     font-size: 20px;
   }
 
-  .create-recall__buttons {
+  .create-recall__buttons,
+.change-recall__buttons {
     margin-top: 3px;
   }
 
@@ -294,7 +319,8 @@
     font-size: 17px;
   }
 
-  .create-recall__buttons {
+  .create-recall__buttons,
+.change-recall__buttons {
     margin-top: 7px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -327,7 +353,8 @@
     padding-bottom: 3px;
   }
 
-  .create-recall__buttons {
+  .create-recall__buttons,
+.change-recall__buttons {
     margin-top: 4px;
     gap: 7px;
   }

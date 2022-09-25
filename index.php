@@ -81,9 +81,10 @@ require 'php/config.php';
             <section class="communication background">
                 <div class="communication__result">Лиза Щербина, Настя Сальцова</div>
                 
-                <div class="communication__forms">
-                    <i class="communication__arrow fa-solid fa-reply"></i>
-                    
+                <i class="communication__arrow left fa-solid fa-reply"></i>
+
+
+                <div class="communication__forms">                    
                     <div class="communication__wrapper">
                         <div class="create-recall">
                             <div class="create-recall__title title">Оставь свой отзыв!</div>
@@ -100,7 +101,7 @@ require 'php/config.php';
                             </form>
                         </div>
 
-                        <div class="change-recall">
+                        <div class="change-recall opacity">
                             <div class="change-recall__title title">Измени отзыв!!</div>
 
                             <form class="form-content">
