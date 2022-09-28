@@ -1,14 +1,22 @@
 /* Добавление комментария */
-createForm.submit((e) =>{
+send_btn.click((e) =>{
     e.preventDefault();
 
 
-    let nameValue = e.target.name.value;
-    let surnameValue = e.target.surname.value;
-    let recallValue = e.target.recall.value;
+    let nameValue = create_name[0].value;
+    let surnameValue = create_surname[0].value;
+    let recallValue = create_recall[0].value;
 
     startThrottle([nameValue, surnameValue, recallValue]);
 });
+
+clear_btn.click((e) =>{
+    e.preventDefault();
+    create_name[0].value = '';
+    create_surname[0].value = '';
+    create_recall[0].value = '';
+});
+
 
 
 function addCommentFn(reset_timeComment, values){
@@ -25,9 +33,9 @@ function addCommentFn(reset_timeComment, values){
         success: function(result){
             if(result.error){
                 reset_timeComment();
-                resultLine.addClass('visible');
-                resultLine.text(result.error);
+                lookResult('error', result.error);
             }else{
+                lookResult('succ', 'Отзыв успешно добавлен!');
                 recalls.append(`
                 <div class="recall">
                     <div class="recall-top">
@@ -36,6 +44,8 @@ function addCommentFn(reset_timeComment, values){
                             <div class="recall-fio__surname">${result.newRecall[0].surname}</div>
                             <div class="recall-fio__status online" data-userId="${result.newRecall[0].userId}"> </div>
                         </div>
+
+                        <i class="fa-solid fa-ellipsis-vertical recall-buttons__options"></i>
     
                         <div class="recall-buttons">
                             <button class="recall-buttons__change" id="${result.newRecall[0].id}">Изменить</button>
@@ -78,19 +88,15 @@ const throttle = (func, ms) =>{
             func.apply(this, [() => {
                 clearInterval(timer);
                 localStorage.setItem('time_last', 0);
-                resultLine.removeClass('visible');
             }, values]);
 
 
-            count = ms / 1000;
-            resultLine.addClass('visible');
+            count = ms / 1000;;
             timer = setInterval(() =>{
                 count--;
-                resultLine.text(count);
 
                 if(count < 1){
                     clearInterval(timer);
-                    resultLine.removeClass('visible');
                 }
             }, 1000);
         }

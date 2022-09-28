@@ -1,4 +1,93 @@
 @charset "UTF-8";
+body.dark .communication__arrow {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.dark .communication__arrow:hover {
+  text-shadow: 2px 4px 6px rgb(178, 178, 178);
+}
+body.dark .recall {
+  background: #000;
+  border: 1px solid #FDFDFD;
+  color: #FDFDFD;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.dark .form-content__name,
+body.dark .form-content__surname,
+body.dark .form-content__recall {
+  background: #000;
+  border: 1px solid #FDFDFD;
+  color: #FDFDFD;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.dark .form-content__name::-webkit-input-placeholder, body.dark .form-content__surname::-webkit-input-placeholder, body.dark .form-content__recall::-webkit-input-placeholder {
+  color: #FDFDFD;
+}
+body.dark .form-content__name::-moz-placeholder, body.dark .form-content__surname::-moz-placeholder, body.dark .form-content__recall::-moz-placeholder {
+  color: #FDFDFD;
+}
+body.dark .form-content__name:-ms-input-placeholder, body.dark .form-content__surname:-ms-input-placeholder, body.dark .form-content__recall:-ms-input-placeholder {
+  color: #FDFDFD;
+}
+body.dark .form-content__name::-ms-input-placeholder, body.dark .form-content__surname::-ms-input-placeholder, body.dark .form-content__recall::-ms-input-placeholder {
+  color: #FDFDFD;
+}
+body.dark .form-content__name::placeholder,
+body.dark .form-content__surname::placeholder,
+body.dark .form-content__recall::placeholder {
+  color: #FDFDFD;
+}
+
+body.light .recall {
+  background: #FDFDFD;
+  border: 1px solid #545456;
+  color: #727272;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.light .communication__arrow {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.light .communication__arrow:hover {
+  text-shadow: 2px 4px 6px rgb(0, 0, 0);
+}
+body.light .communication__arrow {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.light .communication__arrow:hover {
+  text-shadow: 2px 4px 6px rgb(178, 178, 178);
+}
+body.light .form-content__name,
+body.light .form-content__surname,
+body.light .form-content__recall {
+  background: #FDFDFD;
+  border: 1px solid #000;
+  color: #727272;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body.light .form-content__name::-webkit-input-placeholder, body.light .form-content__surname::-webkit-input-placeholder, body.light .form-content__recall::-webkit-input-placeholder {
+  color: #727272;
+}
+body.light .form-content__name::-moz-placeholder, body.light .form-content__surname::-moz-placeholder, body.light .form-content__recall::-moz-placeholder {
+  color: #727272;
+}
+body.light .form-content__name:-ms-input-placeholder, body.light .form-content__surname:-ms-input-placeholder, body.light .form-content__recall:-ms-input-placeholder {
+  color: #727272;
+}
+body.light .form-content__name::-ms-input-placeholder, body.light .form-content__surname::-ms-input-placeholder, body.light .form-content__recall::-ms-input-placeholder {
+  color: #727272;
+}
+body.light .form-content__name::placeholder,
+body.light .form-content__surname::placeholder,
+body.light .form-content__recall::placeholder {
+  color: #727272;
+}
+
 .communication {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,15 +107,22 @@
 
 .communication__result {
   display: none;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 .communication__result.visible {
   display: block;
 }
 .communication__result_error {
-  color: red;
+  background: red;
 }
 .communication__result_succ {
-  color: green;
+  background: #3BD123;
 }
 
 .communication__forms {
@@ -60,9 +156,6 @@
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.communication__arrow:hover {
-  text-shadow: 2px 4px 6px rgb(0, 0, 0);
-}
 
 .right {
   left: unset;
@@ -95,18 +188,15 @@
 .form-content__name,
 .form-content__surname,
 .form-content__recall {
-  background: #FDFDFD;
-  border: 1px solid #545456;
   width: 100%;
   font-size: 24px;
   line-height: 1.2;
-  color: #727272;
   padding: 7px 23px;
   min-height: 43px;
   margin-bottom: 9px;
 }
 
-.create-recall__buttons {
+.buttons-content {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -182,14 +272,14 @@
 }
 
 .recall {
-  background: #FDFDFD;
-  border: 1px solid #545456;
   max-width: 689px;
   min-height: 104px;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.2;
-  color: #727272;
   margin-bottom: 40px;
+  word-break: break-all;
+  border: 1px solid #545456;
+  color: #727272;
 }
 
 .recall-top {
@@ -208,7 +298,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 0 0 19px;
+  padding: 10px 10px 0 19px;
 }
 
 .recall-fio__name {
@@ -233,11 +323,18 @@
 
 .recall-buttons {
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recall-buttons__options {
+  display: none;
 }
 
 .recall-buttons__change,
 .recall-buttons__delete {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.2;
   color: #FFFFFF;
   padding: 0 19px;
@@ -254,7 +351,7 @@
 }
 
 .recall-bottom__text {
-  padding: 14px 0 26px 28px;
+  padding: 14px 28px 26px 28px;
 }
 
 @media (max-width: 1200px) {
@@ -282,8 +379,52 @@
   .communication__arrow {
     display: none;
   }
+
+  .recalls {
+    padding-left: unset;
+  }
+
+  .recall {
+    position: relative;
+  }
+
+  .recall-buttons {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: -2px;
+    top: 30%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20%) scale(0.5);
+            transform: translateY(-20%) scale(0.5);
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .recall-buttons.visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+  }
+
+  .recall-buttons__options {
+    display: block;
+    font-size: 24px;
+    padding: 5px;
+    padding-right: 10px;
+  }
 }
 @media (max-width: 768px) {
+  .communication__result {
+    font-size: 22px;
+  }
+
   .create-recall__title {
     margin-bottom: 15px;
   }
@@ -295,8 +436,7 @@
     font-size: 20px;
   }
 
-  .create-recall__buttons,
-.change-recall__buttons {
+  .buttons-content {
     margin-top: 3px;
   }
 
@@ -310,8 +450,43 @@
     padding-left: 54px;
     padding-right: 54px;
   }
+
+  /*recalls*/
+  .recalls {
+    padding-left: 0px;
+    margin-top: 24px;
+    padding-top: 27px;
+  }
+
+  .recall-fio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recall-fio__name {
+    margin-bottom: 8px;
+  }
+  .recall-fio__surname {
+    margin-bottom: 5px;
+  }
+
+  .recall-buttons__change,
+.recall-buttons__delete {
+    font-size: 17px;
+    padding: 0 15px;
+  }
+
+  .recall-bottom__text {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 480px) {
+  .communication__result {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
   .form-content__name,
 .form-content__surname,
 .form-content__recall {
@@ -319,8 +494,7 @@
     font-size: 17px;
   }
 
-  .create-recall__buttons,
-.change-recall__buttons {
+  .buttons-content {
     margin-top: 7px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,8 +511,20 @@
         -ms-grid-row-align: unset;
         align-self: unset;
   }
+
+  .recall-buttons__change,
+.recall-buttons__delete {
+    font-size: 16px;
+    padding: 0 15px;
+  }
 }
 @media (max-width: 320px) {
+  .communication__result {
+    font-size: 16px;
+    padding: 11px;
+    margin-bottom: 20px;
+  }
+
   .form-content__name,
 .form-content__surname,
 .form-content__recall {
@@ -353,8 +539,7 @@
     padding-bottom: 3px;
   }
 
-  .create-recall__buttons,
-.change-recall__buttons {
+  .buttons-content {
     margin-top: 4px;
     gap: 7px;
   }

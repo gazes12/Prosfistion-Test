@@ -89,27 +89,27 @@ require 'php/config.php';
                         <div class="create-recall">
                             <div class="create-recall__title title">Оставь свой отзыв!</div>
 
-                            <form class="form-content form-content_create-recall">
-                                <input type="text" name="name" class="form-content__name form-content_create-recall__name" placeholder="Имя">
-                                <input type="text" name="surname"placeholder="Фамилия (не обязательно)" class="form-content__surname form-content_create-recall__surname">
-                                <textarea name="recall" placeholder="Оставить отзыв..." class="form-content__recall form-content_create-recall__recall"></textarea>
+                            <form class="form-content form-content__create-recall">
+                                <input type="text" name="name" class="form-content__name" placeholder="Имя">
+                                <input type="text" name="surname"placeholder="Фамилия (не обязательно)" class="form-content__surname">
+                                <textarea name="recall" placeholder="Оставить отзыв..." class="form-content__recall"></textarea>
 
-                                <div class="create-recall__buttons create-recall-buttons">
-                                    <button class="button button_clear" type="submit">Очистить</button>
-                                    <button class="button button_send" type="submit">Отправить</button>
+                                <div class="buttons-content">
+                                    <button class="button button_clear">Очистить</button>
+                                    <button class="button button_send">Отправить</button>
                                 </div>
                             </form>
                         </div>
 
                         <div class="change-recall opacity">
-                            <div class="change-recall__title title">Измени отзыв!!</div>
+                            <div class="change-recall__title title">Измени отзыв!</div>
 
-                            <form class="form-content">
-                                <input type="text" class="form-content__name" placeholder="Имя">
-                                <input type="text" placeholder="Фамилия (не обязательно)" class="form-content__surname">
-                                <textarea placeholder="Оставить отзыв..." class="form-content__recall"></textarea>
+                            <form class="form-content form-content__change-recall">
+                                <input type="text" name="name" class="form-content__name" placeholder="Имя">
+                                <input type="text" name="surname"placeholder="Фамилия (не обязательно)" class="form-content__surname">
+                                <textarea name="recall" placeholder="Оставить отзыв..." class="form-content__recall"></textarea>
 
-                                <div class="change-recall__buttons">
+                                <div class="buttons-content">
                                     <button class="button button_clear">Очистить</button>
                                     <button class="button button_send">Отправить</button>
                                 </div>
@@ -118,7 +118,7 @@ require 'php/config.php';
                     </div>
                 </div>
 
-<!--                 <div class="recalls">
+                <div class="recalls">
                     <?php
                         $query = $conn->query("SELECT * FROM `recalls`");
                         $result = $query->fetchAll();
@@ -143,6 +143,8 @@ require 'php/config.php';
                                             </div>
                                         </div>
             
+                                        <i class="fa-solid fa-ellipsis-vertical recall-buttons__options"></i>
+
                                         <div class="recall-buttons">
                                             <button class="recall-buttons__change" id="<?=$result['id']?>">Изменить</button>
                                             <button class="recall-buttons__delete" id="<?=$result['id']?>">Удалить</button>
@@ -157,7 +159,7 @@ require 'php/config.php';
                         }
                         
                     ?>
-                </div>    -->             
+                </div>         
             </section>
 
             <section class="connect-witch-us background"  id="help">
@@ -206,7 +208,7 @@ require 'php/config.php';
 
 
     <!--Отзывы-->
-    <script src="js/communication/htmlObjects.js"></script>
+    <script src="js/communication/totalObjects.js"></script>
 
 
     <script src="js/communication/mainRecall.js"></script>
@@ -215,6 +217,7 @@ require 'php/config.php';
     <script src="js/communication/deleteRecall.js"></script>
     <script src="js/communication/update_status.js"></script>
     <script src="js/communication/switcherForms.js"></script>
+    <script src="js/communication/mobileButtons.js"></script>
 </body>
 </html>
 
